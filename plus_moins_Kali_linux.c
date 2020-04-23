@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include <time.h>
 
+/*
+
+	Le programme pour Kali linux seulement
+	(ou alternatif si le premier ne marche pas)
+
+*/
+
 int plus_moins();
 
 int main(int argc, char** argv){
@@ -9,13 +16,13 @@ int main(int argc, char** argv){
 	srand(time(NULL)); //Fait en sorte que le random soit base sur le temps
 
 
-	int r = rand() % 20; //obtenir un nombre random, stocke dans r
+	int r = rand() % 100; //obtenir un nombre random, stocke dans r
 
 	
 	int input=0;
 	int dejavu = -1; 
 	int count = 0;
-	printf("%d \n",r);
+	printf("Le nombre est %d (test) \n",r); //Pour la phase test
 
 	do {
 			if (dejavu != input)
@@ -52,7 +59,7 @@ int main(int argc, char** argv){
 
 
 
-int plus_moins(int choix_joueur, int nb_atrouver){ //une fonction qui va afficher Plus si 
+int plus_moins(int choix_joueur, int nb_atrouver){ //une fonction qui va afficher Plus ou moins si 
 
 	if (choix_joueur > nb_atrouver){
 
@@ -67,6 +74,7 @@ int plus_moins(int choix_joueur, int nb_atrouver){ //une fonction qui va affiche
 	else {
 
 		printf("Bingo\n");
+		
 	} 
 	
 	
