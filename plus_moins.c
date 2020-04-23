@@ -9,13 +9,13 @@ int main(int argc, char** argv){
 	srand(time(NULL)); //Fait en sorte que le random soit base sur le temps
 
 
-	int r = rand() % 20; //obtenir un nombre random, stocke dans r
+	int r = rand() % 100; //obtenir un nombre random, stocke dans r
 
 	
 	int input=0;
 	int dejavu = -1; 
 	int count = 0;
-	printf("%d \n",r);
+	printf("Le nb est %d (test) \n",r);
 
 	do {
 			
