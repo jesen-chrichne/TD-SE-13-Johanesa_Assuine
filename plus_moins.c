@@ -21,7 +21,6 @@ int main(int argc, char** argv){
 			
 			printf("Devinez le nombre : ");
 			
-			getchar();
 			scanf("%d", &input);
 			
 			plus_moins(input, r);
@@ -44,12 +43,12 @@ int plus_moins(int choix_joueur, int nb_atrouver){ //une fonction qui va affiche
 
 	if (choix_joueur > nb_atrouver){
 
-		printf("Plus \n"); 
+		printf("Moins \n"); 
 
 	}
 	else if (choix_joueur < nb_atrouver) {
 
-		printf("Moins \n");
+		printf("Plus \n");
 
 	}
 	else {
