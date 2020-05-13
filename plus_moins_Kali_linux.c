@@ -25,6 +25,9 @@ int main(int argc, char** argv){
 	printf("Le nombre est %d (test) \n",r); //Pour la phase test
 
 	do {
+		//Le scanf sur Kali linux presente un bug
+		//les codes ci-dessous permettent de contourner ce probleme
+
 			if (dejavu != input)
 			printf("Devinez le nombre : ");
 			else {
@@ -34,7 +37,7 @@ int main(int argc, char** argv){
 				dejavu = input;
 				getchar();
 				
-				scanf("%d", &input);
+				scanf("%d", &input); 
 			} else {
 				count = 0;
 				dejavu = -1;
@@ -63,12 +66,12 @@ int plus_moins(int choix_joueur, int nb_atrouver){ //une fonction qui va affiche
 
 	if (choix_joueur > nb_atrouver){
 
-		printf("Moins \n"); 
+		printf("Plus \n"); 
 
 	}
 	else if (choix_joueur < nb_atrouver) {
 
-		printf("Plus \n");
+		printf("Moins \n");
 
 	}
 	else {
